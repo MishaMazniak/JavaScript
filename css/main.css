@@ -1,6 +1,194 @@
 * {
-  margin: 50px;
+  margin: 0;
+  padding: 0;
+  outline: none; /* відключенн виділення поля вводу після його вибору */
 }
-#det {
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background: #f7f7f7;
+  font-size: 1en;
+  font-family: "Segoe UI", sans-serif; /* автоматичний підбір подібного шрифту */
+  line-height: 135%;
+}
+a {
+  color: #ec0606;
+  text-decoration: none; /* прибрати підкреслення */
+  transition: all.6s ease; /* ефект зміник кольору */
+  -moz-transition: all.6s ease; /* ефект - адаптація до браузера */
+  -webkit-transition: all.6s ease; /* ефект - адаптація до браузера */
+  -ms-transition: all.6s ease; /* ефект - адаптація до браузера */
+}
+a:hover {
+  color: #0ad82c;
+  text-decoration: none;
+  transition: all.6s ease; /* ефект зміни кольору */
+  -moz-transition: all.6s ease; /* ефект - адаптація до браузера */
+  -webkit-transition: all.6s ease; /* ефект - адаптація до браузера */
+  -ms-transition: all.6s ease; /* ефект - адаптація до браузера */
+}
+a:active {
+  color: #5909ec;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* коректне стискання зображення */
+}
+hr {
+  display: block;
+  border: 0;
+  padding: 0;
+  height: 1px;
+  border-top: 1px solid #ccc;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+/* Selection block */
+::selection {
+  background: #aa1010;
+  color: #fff;
+}
+::-moz-selection {
+  background: #aa1010;
+  color: #fff;
+}
+header,
+footer {
+  width: 98%;
+  background-color: white;
+  float: left;
+}
+header {
+  border-bottom: 2px solid silver;
+  padding: 1%;
+}
+#logo {
+  font-size: 2em;
+  font-family: Comic Sans MS, sans-serif;
+  color: silver;
+}
+.contact {
+  font-size: 1.5em;
+  font-family: Comic Sans MS, sans-serif;
+  margin-left: 20px;
+}
+input[type="text"].field {
+  /* підключення поля input з класом field */
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 5px;
+  margin-left: 20px;
+}
+input[type="text"].field:focus {
+  border: 2px solid #aa1010;
+}
+#menu {
+  font-size: 1.7em;
+  font-family: Comic Sans MS, sans-serif;
+  color: #666;
+}
+#menu,
+hr {
   width: 500px;
+  max-width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#menuHrefs a {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+  color: rgba(46, 34, 34, 0.801);
+}
+#menuHrefs a:hover {
+  background-color: rgba(221, 217, 217, 0.705);
+}
+/* Головні стилі для сайту */
+
+#wrapper {
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+}
+#wrapper #articles {
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+}
+#wrapper #articles article {
+  float: left;
+  width: 31.33%;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  border-radius: 5px;
+  min-height: 400px;
+  margin-left: 2%;
+}
+#wrapper #articles article img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid silver;
+}
+#wrapper #articles article h2 {
+  width: 90%;
+  margin-left: 5%;
+  font-size: 1.7em;
+  font-weight: normal;
+  color: rgb(102, 92, 92);
+  margin-top: 3%;
+}
+#wrapper #articles article p {
+  width: 80%;
+  margin-left: 10%;
+  text-indent: 1.5em;
+}
+#wrapper #articles article a {
+  color: white;
+  padding: 5px 10px 6px 10px;
+  border: 1px solid silver;
+  background: #666;
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-left: 5%;
+  float: left;
+}
+#wrapper #articles article a:hover {
+  background: #0ad82c;
+}
+
+/* Стилі для футера */
+
+footer {
+  border-top: 2px solid silver;
+  margin-top: 10px;
+  padding: 1%;
+  padding-bottom: 2%;
+}
+.madiaImg {
+  width: 25%;
+}
+#pageWrap:after {
+  content: "";
+  display: block;
+}
+footer,
+#pageWrap:after {
+  height: 10px;
+}
+#pageWrap {
+  height: 92%;
+  margin-bottom: -10px;
 }
