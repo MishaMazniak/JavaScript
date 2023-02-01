@@ -129,13 +129,24 @@ hr {
 }
 #wrapper #articles article {
   float: left;
-  width: 31.33%;
   border: 1px solid silver;
   box-sizing: border-box;
-  border-radius: 5px;
   min-height: 400px;
   margin-left: 2%;
 }
+@media (min-width: 700px) {
+  #wrapper #articles article {
+    width: 31.33%;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 699px) {
+  #wrapper #articles article {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 #wrapper #articles article img {
   width: 100%;
   height: 200px;
@@ -167,6 +178,74 @@ hr {
 }
 #wrapper #articles article a:hover {
   background: #0ad82c;
+}
+
+/* Стилі до itArticle */
+
+form {
+  width: 60%;
+  margin-left: 20%;
+  float: left;
+}
+form input {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 5px;
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+  width: 40%;
+}
+form input:focus,
+form textarea:focus {
+  border: 2px solid #aa1010;
+}
+form label {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+form textarea {
+  float: left;
+  width: 60%;
+  clear: both;
+  background-color: #fafafa;
+  border: 2px solid silver;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+form #send {
+  float: left;
+  padding: 10px;
+  background-color: #ec0606;
+  border-radius: 5px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Стилі для головної частини */
+
+#main_soc_block {
+  width: 100%;
+  padding: 2% 0;
+  border-bottom: 2px solid silver;
+  border-top: 2px solid silver;
+  margin: 20px 0;
+  float: left;
+  background-color: #9bc4a1;
+  height: 200px;
+}
+#main_soc_block_in {
+  text-align: center;
+  width: 500px;
+  height: 100px;
+  background-color: #f6f4fa;
+  border-radius: 5px;
+  padding-top: 10px;
+  max-width: 95%;
+  box-sizing: border-box;
 }
 
 /* Стилі для футера */
